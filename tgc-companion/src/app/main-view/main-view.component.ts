@@ -32,17 +32,41 @@ export class MainViewComponent implements OnInit {
     const windCalc1 = this.windSpeed * windCalc2;
     const finalWindCalc = windCalc1 / 3.0;
 
-    const elevationCalc = this.elevation * 0.65;
+    const elevationArr = [
+      1,
+      this.yardage > 50 ? -0.05 : 0,
+      this.yardage > 75 ? -0.05 : 0,
+      this.yardage > 100 ? -0.05 : 0,
+      this.yardage > 125 ? -0.05 : 0,
+      this.yardage > 150 ? -0.05 : 0,
+      this.yardage > 175 ? -0.05 : 0,
+      this.yardage > 200 ? -0.05 : 0,
+      this.yardage > 225 ? -0.05 : 0,
+      this.yardage > 250 ? -0.05 : 0
+    ];
+    const elevationCalc = ((this.elevation / 3) * 1) * elevationArr.reduce((a, b) => a + b, 0);
 
     let roughCalc = 0;
     if(this.rough === "Light Rough") roughCalc = 0.07;
     else if(this.rough === "Heavy Rough") roughCalc = 0.14;
-    const finalRoughCalc = 1 + roughCalc * this.yardage;
+    const finalRoughCalc = roughCalc * this.yardage;
 
     let bunkerCalc = 0;
     if(this.bunker == "true" && this.yardage <= 40) bunkerCalc = 0.4;
     else if(this.bunker == "true" && this.yardage > 40) bunkerCalc = 0.06;
-    const finalBunkerCalc = 1 + bunkerCalc * this.yardage;
+    const finalBunkerCalc = bunkerCalc * this.yardage;
+
+    console.log(this.yardage);
+    console.log(this.elevation);
+    console.log(this.windSpeed);
+    console.log(this.windDirection);
+    console.log(this.bunker);
+    console.log(this.rough);
+    console.log("-----");
+    console.log(finalWindCalc);
+    console.log(finalRoughCalc);
+    console.log(finalBunkerCalc);
+    console.log(elevationCalc);
 
     this.playingYardage = this.yardage + finalWindCalc + elevationCalc + finalRoughCalc + finalBunkerCalc;
   }
