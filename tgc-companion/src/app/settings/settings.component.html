@@ -1,0 +1,255 @@
+<button role="button" class="btn btn-primary" (click)="resetSettings()">Reset</button>
+<div class="row align-items-center">
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="60-wedge-input">60° Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="60-wedge-input" name="60-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club60wedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="60-wedge-owned" [(ngModel)]="settingsService._hasClub60wedge">
+    <label class="form-check-label" for="60-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="58-wedge-input">58° Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="58-wedge-input" name="58-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club58wedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="58-wedge-owned" [(ngModel)]="settingsService._hasClub58wedge">
+    <label class="form-check-label" for="58-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="56-wedge-input">56° Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="56-wedge-input" name="56-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club56wedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="56-wedge-owned" [(ngModel)]="settingsService._hasClub56wedge">
+    <label class="form-check-label" for="56-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="54-wedge-input">54° Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="54-wedge-input" name="54-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club54wedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="54-wedge-owned" [(ngModel)]="settingsService._hasClub54wedge">
+    <label class="form-check-label" for="54-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="52-wedge-input">52° Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="52-wedge-input" name="52-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club52wedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="52-wedge-owned" [(ngModel)]="settingsService._hasClub52wedge">
+    <label class="form-check-label" for="52-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="gap-wedge-input">Gap Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="gap-wedge-input" name="gap-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._clubGapWedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="gap-wedge-owned" [(ngModel)]="settingsService._hasClubGapWedge">
+    <label class="form-check-label" for="gap-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="pitching-wedge-input">Pitching Wedge Carry (Yds)</label>
+      <input type="number" class="form-control" id="pitching-wedge-input" name="pitching-wedge-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._clubPitchWedge">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="pitching-wedge-owned" [(ngModel)]="settingsService._hasClubPitchWedge">
+    <label class="form-check-label" for="pitching-wedge-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="9-iron-input">9 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="9-iron-input" name="9-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club9iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="9-iron-owned" [(ngModel)]="settingsService._hasClub9iron">
+    <label class="form-check-label" for="9-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="8-iron-input">8 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="8-iron-input" name="8-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club8iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="8-iron-owned" [(ngModel)]="settingsService._hasClub8iron">
+    <label class="form-check-label" for="8-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="7-iron-input">7 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="7-iron-input" name="9-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club7iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="7-iron-owned" [(ngModel)]="settingsService._hasClub7iron">
+    <label class="form-check-label" for="7-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="6-iron-input">6 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="6-iron-input" name="6-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club6iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="6-iron-owned" [(ngModel)]="settingsService._hasClub6iron">
+    <label class="form-check-label" for="6-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="5-iron-input">5 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="5-iron-input" name="5-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club5iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="5-iron-owned" [(ngModel)]="settingsService._hasClub5iron">
+    <label class="form-check-label" for="5-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="4-iron-input">4 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="4-iron-input" name="4-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club4iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="4-iron-owned" [(ngModel)]="settingsService._hasClub4iron">
+    <label class="form-check-label" for="4-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="3-iron-input">3 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="3-iron-input" name="3-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club3iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="3-iron-owned" [(ngModel)]="settingsService._hasClub3iron">
+    <label class="form-check-label" for="3-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="2-iron-input">2 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="2-iron-input" name="2-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club2iron">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="2-iron-owned" [(ngModel)]="settingsService._hasClub2iron">
+    <label class="form-check-label" for="2-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="hybrid-5-iron-input">Hybrid 5 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="hybrid-5-iron-input" name="hybrid-5-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._clubHybrid5">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="hybrid-5-iron-owned" [(ngModel)]="settingsService._hasClubHybrid5">
+    <label class="form-check-label" for="hybrid-5-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="hybrid-4-iron-input">Hybrid 4 Iron Carry (Yds)</label>
+      <input type="number" class="form-control" id="hybrid-4-iron-input" name="hybrid-4-iron-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._clubHybrid4">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="hybrid-4-iron-owned" [(ngModel)]="settingsService._hasClubHybrid4">
+    <label class="form-check-label" for="hybrid-4-iron-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="7-wood-input">7 Wood Carry (Yds)</label>
+      <input type="number" class="form-control" id="7-wood-input" name="7-wood-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club7wood">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="7-wood-owned" [(ngModel)]="settingsService._hasClub7wood">
+    <label class="form-check-label" for="7-wood-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="5-wood-input">5 Wood Carry (Yds)</label>
+      <input type="number" class="form-control" id="5-wood-input" name="5-wood-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club5wood">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="5-wood-owned" [(ngModel)]="settingsService._hasClub5wood">
+    <label class="form-check-label" for="5-wood-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="3-wood-input">3 Wood Carry (Yds)</label>
+      <input type="number" class="form-control" id="3-wood-input" name="3-wood-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._club3wood">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="3-wood-owned" [(ngModel)]="settingsService._hasClub3wood">
+    <label class="form-check-label" for="3-wood-owned">
+      Own club
+    </label>
+  </div>
+  <div class="col-sm-8 col-md-3">
+    <div class="form-group">
+      <label for="driver-input">Driver Carry (Yds)</label>
+      <input type="number" class="form-control" id="driver-input" name="driver-input" placeholder="Your Carry" min="0" [(ngModel)]="settingsService._clubDriver">
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <input class="form-check-input" type="checkbox" id="driver-owned" [(ngModel)]="settingsService._hasClubDriver">
+    <label class="form-check-label" for="driver-owned">
+      Own club
+    </label>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-sm-12 col-md-3">
+    <form>
+      <div class="form-group">
+        <label for="yardage-input">Yardage</label>
+        <input type="number" class="form-control" id="yardage-input" name="yardage-input" placeholder="Yardage" min="0" [(ngModel)]="yardage">
+      </div>
+      <div class="form-group">
+        <label for="wind-speed-input">Wind Speed</label>
+        <input type="number" class="form-control" id="wind-speed-input" name="wind-speed-input" placeholder="Wind Speed" min="0" [(ngModel)]="windSpeed">
+        <label for="wind-direction-select">Direction</label>
+        <select class="form-control" id="wind-direction-select" name="wind-direction-select">
+          <option value="Tailwind">Tailwind</option>
+          <option value="Headwind">Headwind</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="elevation-input">Elevation (feet)</label>
+        <input type="number" class="form-control" id="elevation-input" name="elevation-input" aria-described-by="elevation-help" placeholder="Elevation" min="0" [(ngModel)]="elevation">
+        <small id="elevation-help" class="form-text text-muted">Enter negative value for downhill elevation</small>
+      </div>
+      <div class="form-group">
+        <label for="rough-select">Rough</label>
+        <select [(ngModel)]="rough" class="form-control" id="rough-select" name="rough-select">
+          <option ngValue="None">None</option>
+          <option ngValue="Light Rough">Light Rough</option>
+          <option ngValue="Heavy Rough">Heavy Rough</option>
+        </select>
+        <label for="bunker-select">Bunker</label>
+        <select [(ngModel)]="bunker" class="form-control" id="bunker-select" name="bunker-select">
+          <option ngValue="false">No</option>
+          <option ngValue="true">Yes</option>
+        </select>
+        <small *ngIf="bunker == 'true' && rough != 'None'" id="error-help" class="form-text text-danger">Can't have rough and bunker</small>
+      </div>
+      <button role="button" [disabled]="bunker == 'true' && rough != 'None'" class="btn btn-primary" (click)="getResults()">Calculate</button>
+    </form>
+  </div>
+  <div class="col-1"></div>
+  <div class="col-sm-12 col-md-8">
+    <h2>Results</h2>
+    <p>Playing yardage: {{ playingYardage | number : '1.2-2' }}<p>
+    <p *ngIf="recommendedClub != ''">Recommended club: {{ recommendedClub }}</p>
+    <p *ngIf="recommendedClub == ''">Recommended club: <i>None</i></p>
+  </div>
+</div>
